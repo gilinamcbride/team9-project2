@@ -27,8 +27,7 @@ router.post("/", withAuth, (req, res) => {
     Comment.create({
       comment_text: req.body.comment_text,
       blog_id: req.body.blog_id,
-      user_id: req.body.user_id,
-      // NEED TO CHANGE user_id BACK TO req.session.user_id AFTER TESTING IN INSOMNIA
+      user_id: req.session.user_id,
     })
       .then((dbCommentData) => res.json(dbCommentData))
       .catch((err) => {

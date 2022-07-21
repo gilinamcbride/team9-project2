@@ -19,6 +19,13 @@ Blog.init(
       type: DataTypes.TEXT("long"),
       allowNull: false,
     },
+    city_location: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [2],
+      },
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

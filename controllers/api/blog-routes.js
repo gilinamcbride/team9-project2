@@ -63,8 +63,8 @@ router.post("/", withAuth, (req, res) => {
   Blog.create({
     title: req.body.title,
     content: req.body.content,
-    user_id: req.body.user_id,
-    // NEED TO CHANGE user_id BACK TO req.session.user_id AFTER TESTING IN INSOMNIA
+    city_location: req.body.city_location,
+    user_id: req.session.user_id,
   })
     .then((dbBlogData) => res.json(dbBlogData))
     .catch((err) => {
@@ -78,6 +78,7 @@ router.put("/:id", withAuth, (req, res) => {
     {
       title: req.body.title,
       content: req.body.content,
+      city_location: req.body.city_location,
     },
     {
       where: {

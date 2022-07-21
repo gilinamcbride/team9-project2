@@ -16,7 +16,7 @@ app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 const sess = {
-  secret: "tech blog secret",
+  secret: "travel blog secret",
   cookie: {},
   resave: false,
   saveUninitialized: true,
