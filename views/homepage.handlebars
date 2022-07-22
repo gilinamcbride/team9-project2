@@ -1,0 +1,15 @@
+<ol class="post-list">
+    {{#each blogPosts}}
+    <li>
+        <article class="post">
+        <div class="title">
+            <span>({{title}})</span>
+            <span>City - ({{city_location}})</span>
+        </div>
+        <div class="meta">
+            By {{user.username}} on {{created_at}}
+        </div>
+        </article>
+    </li>
+    {{/each}}
+</ol>
