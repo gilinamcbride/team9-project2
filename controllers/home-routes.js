@@ -32,7 +32,10 @@ router.get('/', (req, res) => {
         // loop over and map sequelize object into a serialized version
         const blogPosts = dbBlogData.map(blog => blog.get({ plain: true }));
         // pass a single blog object into homepage template
-        res.render('homepage', { blogPosts });
+        res.render('homepage', { 
+            blogPosts,
+            loggedIn: req.session.loggedIn
+         });
     })
     .catch(err => {
         console.log(err);
@@ -79,7 +82,10 @@ router.get('/blog/:id', (req, res) => {
         const post = dbBlogData.get({ plain: true });
 
         // passing data to the template
-        res.render('single-blog', { post });
+        res.render('single-blog', { 
+            post,
+            loggedIn: req.session.loggedIn
+         });
     })
     .catch(err => {
         console.log(err);
