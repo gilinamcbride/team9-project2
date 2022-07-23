@@ -93,6 +93,59 @@ router.get('/blog/:id', (req, res) => {
     });
 });
 
+
+router.get('/blogs/location/:city_location', (req, res) => {
+    Blog.findAll({
+        where: {
+            city_location: req.params.city_location
+        },
+        attributes: [
+            'id',
+            'title',
+            'content',
+            'city_location',
+            'created_at'
+        ],
+
+        include: [
+            {
+                model: Comment,
+                attributes: ['id', 'comment_text', 'blog_id', 'user_id', 'created_at'],
+                include: {
+                    model: User,
+                    attributes: ['username']
+                }
+            },
+
+            {
+                model: User,
+                attributes: ['username']
+            }
+        ]
+    })
+    .then(dbBlogData => {
+        if(!dbBlogData) {
+            res.status(404).json({ message: 'No post found with this id' });
+            return;
+        }
+
+
+        // serialize the data
+        const post = dbBlogData.map(blog => blog.get({ plain: true }));
+
+        // passing data to the template
+        res.render('displaysearch', { 
+            post,
+            loggedIn: req.session.loggedIn
+         });
+    })
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
+
+
 router.get('/login', (req, res) => {
     if(req.session.loggedIn) {
         res.redirect('/');
