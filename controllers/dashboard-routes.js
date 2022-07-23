@@ -3,6 +3,17 @@ const sequelize = require('../config/connection');
 const withAuth = require('../utils/auth');
 const { Blog, User, Comment } = require('../models');
 
+// router.get('/', (req, res) => {
+//     Blog.findAll({
+//         where: {
+//             // use the ID from the session
+//             id: req.session.user_id
+//         },
+
+
+//     })
+// });
+
 router.get('/', withAuth, (req, res) => {
     Blog.findAll({
         where: {
@@ -43,3 +54,9 @@ router.get('/', withAuth, (req, res) => {
         res.status(500).json(err);
     });
 });
+
+
+
+
+
+module.exports = router;
