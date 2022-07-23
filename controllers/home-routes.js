@@ -40,10 +40,6 @@ router.get('/', (req, res) => {
     });
 });
 
-router.get('/login', (req, res) => {
-    res.render('login');
-});
-
 router.get('/blog/:id', (req, res) => {
     Blog.findOne({
         where: {
@@ -90,5 +86,14 @@ router.get('/blog/:id', (req, res) => {
         res.status(500).json(err);
     });
 });
+
+router.get('/login', (req, res) => {
+    if(req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('login');
+});
+
 
 module.exports = router;
