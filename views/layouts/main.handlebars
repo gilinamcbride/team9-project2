@@ -19,10 +19,10 @@
             <button id="city-search-btn">Search</button>
           </form>
           {{#if loggedIn}}
-            <a href="/dashboard">dashboard</a>
-            <button id="logout" class="btn-no-style">logout</button>
+            <a href="/dashboard">Dashboard</a>
+            <button id="logout" class="btn-no-style">Logout</button>
           {{else}}
-            <a href="/login">login</a>
+            <a href="/login">Login</a>
             <a href="/sign-up">Sign-Up</a>
           {{/if}}
         </nav>
@@ -31,14 +31,13 @@
         {{{body}}}
       </main>
       <footer>
-        Thanks for visiting!
+        <a href="https://www.pexels.com/api/">Photos provided by Pexels</a>
       </footer>
     </div>
     {{#if loggedIn}}
       <script src="/javascript/logout.js"></script>
     {{/if}}
     <script src="/javascript/search-city.js"></script>
-    <script src="/javascript/search-photos.js"></script>
   </body>
 
 </html>
