@@ -23,14 +23,15 @@
 {{#if blogPosts.length}}
 <section>
   <h2>Your Posts</h2>
-  <ol>
+  <div>
     {{#each blogPosts as |post|}}
-    <li>
+    <div>
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-    </li>
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link"><button type="submit">Edit</button></a>
+      <a href="/dashboard/edit/{{post.id}}" class="delete-link"><button type="submit">Delete</button></a>
+    </div>
     {{/each}}
-  </ol>
+  </div>
 </section>
 {{/if}}
 
