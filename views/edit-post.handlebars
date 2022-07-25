@@ -11,7 +11,7 @@
 
         <div>
             <label for="content-body">Content</label>
-            <textarea name="content-body" value="{{post.content}}"></textarea>
+            <input name="content-body" value="{{post.content}}"></input>
         </div>
 
         <div>
@@ -22,7 +22,7 @@
         <div>
             By you on {{format_date post.created_at}}
             |
-            <a href="/blogs/{{post.id}}">{{comments.length}} comment(s)</a>
+            <a href="/blogs/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
         </div>
         <button type="submit">Save post</button>
         <button type="button" class="delete-post-btn">Delete post</button>
