@@ -45,7 +45,103 @@ const commentdata = [
     comment_text: 'Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.',
     user_id: 6,
     blog_id: 9
-  }
+  },
+
+  {
+    comment_text: 'Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. A condimentum vitae sapien pellentesque. Sit amet tellus cras adipiscing enim. Tortor vitae purus faucibus ornare suspendisse sed.',
+    user_id: 2,
+    blog_id: 10
+  },
+
+  {
+    comment_text: 'Cras semper auctor neque vitae tempus.',
+    user_id: 3,
+    blog_id: 11
+  },
+
+  {
+    comment_text: 'Dolor sit amet consectetur adipiscing elit duis.',
+    user_id: 4,
+    blog_id: 12
+  },
+
+  {
+    comment_text: 'Metus dictum at tempor commodo ullamcorper.',
+    user_id: 5,
+    blog_id: 13
+  },
+
+  {
+    comment_text: 'Consectetur libero id faucibus nisl tincidunt eget nullam.',
+    user_id: 6,
+    blog_id: 14
+  },
+
+  {
+    comment_text: 'Dolor sit amet consectetur adipiscing elit duis.',
+    user_id: 7,
+    blog_id: 15
+  },
+
+  {
+    comment_text: 'Est ante in nibh mauris cursus mattis.',
+    user_id: 10,
+    blog_id: 16
+  },
+
+  {
+    comment_text: 'Consectetur libero id faucibus nisl tincidunt eget nullam.',
+    user_id: 10,
+    blog_id: 17
+  },
+
+  {
+    comment_text: 'Metus dictum at tempor commodo ullamcorper.',
+    user_id: 10,
+    blog_id: 11
+  },
+
+  {
+    comment_text: 'Dolor sit amet consectetur adipiscing elit duis.',
+    user_id: 10,
+    blog_id: 11
+  },
+
+  {
+    comment_text: 'Est ante in nibh mauris cursus mattis.',
+    user_id: 10,
+    blog_id: 11
+  },
+
+  {
+    comment_text: 'Est ante in nibh mauris cursus mattis.',
+    user_id: 10,
+    blog_id: 12
+  },
+
+  {
+    comment_text: 'Consectetur libero id faucibus nisl tincidunt eget nullam.',
+    user_id: 10,
+    blog_id: 12
+  },
+
+  {
+    comment_text: 'Metus dictum at tempor commodo ullamcorper.',
+    user_id: 11,
+    blog_id: 12
+  },
+
+  {
+    comment_text: 'Cras semper auctor neque vitae tempus.',
+    user_id: 11,
+    blog_id: 13
+  },
+
+  {
+    comment_text: 'Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. A condimentum vitae sapien pellentesque. Sit amet tellus cras adipiscing enim. Tortor vitae purus faucibus ornare suspendisse sed.',
+    user_id: 11,
+    blog_id: 15
+  },
 ];
 
 const seedComments = () => Comment.bulkCreate(commentdata);
