@@ -1,23 +1,29 @@
 <section>
-  <h2>Create New Blog Post</h2>
+  <h2 class="blogpage-heading">CREATE NEW BLOG POST</h2>
 
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
-    </div>
+  <<div class="container mx-auto p-12 flex justify-content space-between align-middle">
+    <form class="new-post-form">
+      <div>
+        <label for="post-title">Title</label>
+        <input type="text" id="post-title" name="post-title" />
+      </div>
 
-    <div>
-      <label for="content-body">Content</label>
-      <textarea name="content-body"></textarea>
-    </div>
+      <div>
+        <label for="content-body">Content</label>
+        <textarea name="content-body"></textarea>
+      </div>
 
-    <div>
-      <label for="city-location">City</label>
-      <input id="post-city-location" name="post-city-location" />
-    </div>
-    <button type="submit" class="btn">Create</button>
-  </form>
+      <div>
+        <label for="city-location">City</label>
+        <input id="post-city-location" name="post-city-location" />
+      </div>
+    
+      <div><button class="py-35 px-6 bg-blue-400 text-white font-semibold rounded-lg shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-70">
+        Create Post
+      </button>
+      </div>
+    </form>
+   </div>
 </section>
 
 {{#if blogPosts.length}}

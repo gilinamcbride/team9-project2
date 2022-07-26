@@ -17,13 +17,17 @@
       <nav>
         <form>
           <input id="city-search" type="text" placeholder="Enter City">
-          <button id="city-search-btn">Search</button>
+          <button class="py-35 px-6 bg-blue-400 text-white font-semibold rounded-lg shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-70">
+            Search
+          </button>
         </form>
         {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
+        <a href="/dashboard">Dashboard</a>
+        <button class="py-35 px-6 bg-blue-400 text-white font-semibold rounded-lg shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-70">
+            Log Out
+        </button>
         {{else}}
-        <a href="/login">login</a>
+        <a href="/login">Login</a>
         <a href="/sign-up">Sign-Up</a>
         {{/if}}
       </nav>
@@ -32,7 +36,7 @@
       {{{ body }}}
     </main>
     <footer>
-      Thanks for visiting!
+      Thanks You For Visiting!
     </footer>
   </div>
   {{#if loggedIn}}
