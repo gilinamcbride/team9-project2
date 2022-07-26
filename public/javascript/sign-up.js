@@ -18,7 +18,8 @@ async function signupFormHandler(event) {
             document.location.replace('/dashboard');
         }
         else {
-            alert(response.statusText);
+            alert('Account already exists');
+            // alert(response.statusText);
         }
     }
 

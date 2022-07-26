@@ -1,12 +1,15 @@
 <article class="post">
   <div class="title">
-    <span>({{post.title}})</span>
+    {{post.title}}
+  </div>
+  <div>
+    {{post.content}}
   </div>
   <div class="meta">
     By {{post.user.username}} on
-    {{post.created_at}}
+    {{format_date post.created_at}}
     |
-    <a href="/blog/{{id}}">{{comments.length}} comment(s)</a>
+    <a href="/blog/{{id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
   </div>
 </article>
 
@@ -17,9 +20,13 @@
   </div>
 
   <div>
+<<<<<<< HEAD
     <button class="py-35 px-6 bg-blue-400 text-white font-semibold rounded-lg shadow-md hover:bg-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-70">
         Add Comment
     </button>
+=======
+    <button type="submit">Add Comment</button>
+>>>>>>> 7e6fdc0db2b063996b3a98cc95ff9f0a707d9076
   </div>
 </form>
 {{/if}}

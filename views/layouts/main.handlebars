@@ -1,6 +1,6 @@
-<!DOCTYPE html>
 <html lang="en">
 
+<<<<<<< HEAD
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,5 +44,48 @@
   {{/if}}
   <script src="/javascript/search-city.js"></script>
 </body>
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Out Of Office</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>
+          <a href="/">Out Of Office</a>
+          <p>A travel blog.</p>
+        </h1>
+        <nav>
+          <form>
+            <input id="city-search" type="text" placeholder="Enter City" />
+            <button id="city-search-btn">Search</button>
+          </form>
+          {{#if loggedIn}}
+            <a href="/dashboard">Dashboard</a>
+            <button id="logout" class="btn-no-style">Logout</button>
+          {{else}}
+            <a href="/login">Login</a>
+            <a href="/sign-up">Sign-Up</a>
+          {{/if}}
+        </nav>
+      </header>
+      <main>
+        {{{body}}}
+      </main>
+      <footer>
+        <p>Out Of Office &copy; 2022</p>
+        <p><a href="https://www.pexels.com/api/">Photos provided by Pexels</a></p>
+      </footer>
+    </div>
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
+    <script src="/javascript/search-city.js"></script>
+  </body>
+>>>>>>> 7e6fdc0db2b063996b3a98cc95ff9f0a707d9076
 
 </html>

@@ -18,7 +18,8 @@ async function loginFormHandler(event) {
              //go to the main page
              document.location.replace('/dashboard')
          } else {
-             alert(response.statusText);
+            alert('Account does not exist');
+            //  alert(response.statusText);
          }
      }
 };
