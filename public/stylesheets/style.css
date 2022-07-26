@@ -1,35 +1,42 @@
-:root {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { 
   --first-color: #091D36;
   --second-color: #0B4C84;
   --third-color: #598EC2;
   --fourth-color: #9BC1EE;
   --fifth-color: #F0EFF5;
+  --primary-font: Calibri;
+  --secondary-font: Candara;
+  --tertiary-font: Dejavu Sans;
 }
-* {
+* { 
     box-sizing: border-box;
   }
   
-  body, html {
+  body, html { 
     height: 100%;
     padding: 0;
     margin: 0;
-    font-family: sans-serif;
-    color: var(--first-color);
+    font-family: var(--primary-font);
+    color: var(--second-color);
   }
   
   a {
     text-decoration: none;
-    color: var(--fourth-color);
+    color: var(--first-color);
     font-weight: bold;
     transition: color .1s;
   }
   
   a:hover {
-    color: var(--second-color);
+    color: var(--fourth-color);
   }
   
-  button {
-    background-color: var(--fifth-color);
+  button { 
+    background-color: var(--first-color);
     border: 0;
     padding: 1%;
     color: black;
@@ -39,22 +46,22 @@
     border-radius: 5px;
   }
   
-  button:hover {
+  button:hover { 
     background-color: var(--fourth-color);
   }
   
-  .post-list {
+  .post-list { 
     margin: 0;
     padding: 0;
   }
   
-  textarea, input {
+  text, textarea, input {
     padding: .5%;
     border-radius: 5px;
     border: 1px solid #ccc;
   }
   
-  textarea:focus, input:focus {
+  text:focus, textarea:focus, input:focus {
     outline: none;
     border: 1px solid color var(--fifth-color);
   }
@@ -64,15 +71,24 @@
     min-height: 100px;
   }
   
+  
+  .login-form > div { 
+    font-family: var(--tertiary-font);
+  }
+
+  .signup-form > div { 
+    font-family: var(--secondary-font);
+  }
+  
   form > div {
     margin-bottom: 2%;
   }
   
-  form label {
+  form label { 
     display: block;
   }
   
-  .wrapper {
+  .wrapper { 
     width: 100%;
     min-height: 100%;
     max-width: 1200px;
@@ -81,7 +97,7 @@
     flex-direction: column;
   }
   
-  header {
+  header { 
     border-bottom: 1px solid #ccc;
     display: flex;
     justify-content: space-between;
@@ -89,16 +105,20 @@
     padding: 0 1%;
   }
   
-  header h1 {
+  header h1 { 
     font-size: 1em;
   }
   
-  main {
+  h2 { 
+    font-family: var(--secondary-font);
+  }
+
+  main { 
     flex: 1;
     padding: 2% 4%;
   }
   
-  .btn-no-style {
+  .btn, btn-no-style{ 
     background: none;
     border: none;
     padding: 0;
@@ -111,45 +131,45 @@
     margin-left: 16px;
   }
   
-  .btn-no-style:hover {
+  .btn:hover, btn-no-style:hover { 
     background: none;
     color: var(--fourth-color);
   }
   
-  .delete-post-btn {
-    background-color: ;
+  .submit-button { 
+    background-color: var(--first-color);
+  }
+
+  .submit-button:hover { 
+    background-color: var(--fourth-color);
+  }
+
+  .delete-post-btn { 
+    background-color: var(--first-color);
   }
   
-  .delete-post-btn:hover {
-    background-color: ;
+  .delete-post-btn:hover {  
+    background-color: var(--fourth-color);
   }
   
-  .post {
+  .post { 
     margin-bottom: 2%;
     line-height: 150%;
   }
   
-  .post .title span {
+  .post .title span { 
     font-style: italic;
     font-size: 90%;
-    color: ;
+    color: var(--primary-color);
   }
   
-  .edit-link {
+  .edit-link { 
     display: block;
     margin: -1.5% 0 2% 0;
   }
   
-  .upvote-btn {
-    background-color: ;
-    transition: background-color .1s;
-  }
   
-  .upvote-btn:hover {
-    background-color: greenyellow;
-  }
-  
-  .comment-form {
+  .comment-form { 
     margin-bottom: 5%;
   }
   
@@ -162,21 +182,21 @@
     background-color: var(--fourth-color);
   }
   
-  .comment .meta {
+  .comment .meta { 
     font-size: 90%;
     margin-bottom: .5%;
     opacity: .6;
   }
   
-  .new-post-form input {
+  .new-post-form input { 
     width: 300px;
   }
   
-  .edit-post-form {
+  .edit-post-form { 
     margin-bottom: 5%;
   }
   
-  footer {
+  footer { 
     border-top: 1px solid #ccc;
     display: flex;
     justify-content: center;
@@ -184,6 +204,3 @@
     font-size: 110%;
   }
 
-  @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
