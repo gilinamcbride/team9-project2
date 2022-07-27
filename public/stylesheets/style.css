@@ -373,31 +373,96 @@ footer p a {
 
 /* SIGNUP/LOGIN STYLES */
 
-/* .login-form > div {
+.signup-section > div {
   font-family: var(--tertiary-font);
   align-content: space-around;
   display: block;
   flex: auto;
-  animation-duration: 3s;
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+.login-section > div {
+  font-family: var(--tertiary-font);
+  align-content: space-around;
+  display: block;
+  flex: auto;
+  animation-duration: 2s;
   animation-name: slidein;
 }
 @keyframes slidein {
   from {
     margin-left: 100%;
-    width: 300%;
+    width: 300px;
   }
 
   to {
     margin-left: 0%;
-    width: 100%;
+    width: 300px;
   }
 }
 
-.signup-form > div {
-  font-family: var(--tertiary-font);
-  align-content: space-around;
-  display: block;
-  flex: auto;
-  animation-duration: 3s;
-  animation-name: slidein;
+.login-section,
+.signup-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+.login,
+.signup {
+  padding: 30px;
+  background-color: rgba(240, 239, 245, 0.25);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-family: "Nunito", sans-serif;
+  width: 300px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.login-section a,
+.signup-section a {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--first-color);
+  font-family: "Satisfy", cursive;
+}
+
+.login-section a:hover,
+.signup-section a:hover {
+  color: #f1d35a;
+}
+
+.login-form div,
+.signup-form div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 10px 0;
+}
+
+.login-form button,
+.signup-form button {
+  margin: 20px 0;
+}
+
+/* MEDIA QUERIES */
+
+/* @media screen and (max-width: 757px) {
+  .personal-info {
+    flex-direction: row;
+  }
+
+  .personal-info p {
+    font-size: 16px;
+  }
+
+  .link-list {
+    flex-direction: column;
+  }
 } */
