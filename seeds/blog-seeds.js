@@ -2,63 +2,63 @@ const { Blog } = require('../models');
 
 const postdata = [
   {
-    title: 'Lorem ipsum dolor sit amet',
+    title: 'Concert in RTP area!',
     content: 'onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     city_location: 'Raleigh',
     user_id: 1
   },
 
   {
-    title: 'Lorem ipsum dolor sit amet',
+    title: 'Going to Charlotte Hornets basketball game',
     content: 'onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     city_location: 'Charlotte',
     user_id: 6
   },
 
   {
-    title: 'Lorem ipsum dolor sit amet',
+    title: 'Soaking up the sun in Miami',
     content: 'onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     city_location: 'Miami',
     user_id: 3
   },
 
   {
-    title: 'Lorem ipsum dolor sit amet',
+    title: 'Sightseeing in Los Angeles',
     content: 'onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     city_location: 'Los Angeles',
     user_id: 7
   },
 
   {
-    title: 'Lorem ipsum dolor sit amet',
+    title: 'Visiting the culture of Charleston',
     content: 'onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     city_location: 'Charleston',
     user_id: 5
   },
 
   {
-    title: 'Lorem ipsum dolor sit amet',
+    title: 'Change in scenary in Seattle',
     content: 'onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     city_location: 'Seattle',
     user_id: 2
   },
 
   {
-    title: 'Lorem ipsum dolor sit amet',
+    title: 'Seeing what Dallas has to offer',
     content: 'onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     city_location: 'Dallas',
     user_id: 4
   },
 
   {
-    title: 'Lorem ipsum dolor sit amet',
+    title: 'Vacation to paradise in Hawaii',
     content: 'onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     city_location: 'Honolulu',
     user_id: 8
   },
 
   {
-    title: 'Lorem ipsum dolor sit amet',
+    title: 'Had to see the Aquarium',
     content: 'onsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     city_location: 'Atlanta',
     user_id: 9
@@ -72,23 +72,23 @@ const postdata = [
   },
 
   {
-    title: 'Going to Marseille',
+    title: 'Going to Rome',
     content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum nisi quis eleifend quam adipiscing vitae proin sagittis nisl. Sed risus ultricies tristique nulla aliquet enim tortor at. Nibh ipsum consequat nisl vel pretium. Arcu bibendum at varius vel pharetra vel.',
-    city_location: 'Marseille',
+    city_location: 'Rome',
     user_id: 2
   },
 
   {
-    title: 'Vacation to Marseille',
+    title: 'Vacation to Rome',
     content: 'Scelerisque eleifend donec pretium vulputate sapien nec sagittis aliquam malesuada. Hendrerit gravida rutrum quisque non tellus. Mi quis hendrerit dolor magna eget est lorem ipsum dolor. ',
-    city_location: 'Marseille',
+    city_location: 'Rome',
     user_id: 3
   },
 
   {
-    title: 'Visiting the old roots in Marseille',
+    title: 'Visiting the old roots in Rome',
     content: 'Sit amet aliquam id diam maecenas ultricies mi eget mauris. A scelerisque purus semper eget duis at tellus. Urna molestie at elementum eu. Ut ornare lectus sit amet est placerat in egestas. A pellentesque sit amet porttitor eget dolor morbi. Feugiat in fermentum posuere urna.',
-    city_location: 'Marseille',
+    city_location: 'Rome',
     user_id: 3
   },
 
@@ -100,9 +100,9 @@ const postdata = [
   },
 
   {
-    title: 'Visiting the ruins of Marseille',
+    title: 'Visiting the ruins of Rome',
     content: 'Id cursus metus aliquam eleifend mi in nulla posuere sollicitudin. A condimentum vitae sapien pellentesque. Sit amet tellus cras adipiscing enim. Tortor vitae purus faucibus ornare suspendisse sed. Morbi tincidunt augue interdum velit. Nec feugiat nisl pretium fusce. Leo duis ut diam quam nulla porttitor massa id. Cras semper auctor neque vitae tempus. Consequat ac felis donec et odio pellentesque diam volutpat commodo. Dolor sit amet consectetur adipiscing elit duis. Erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit. Diam sit amet nisl suscipit adipiscing bibendum. Magnis dis parturient montes nascetur ridiculus mus mauris vitae.',
-    city_location: 'Marseille',
+    city_location: 'Rome',
     user_id: 4
   },
 

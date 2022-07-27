@@ -43,7 +43,7 @@ const userdata = [
     password: 'password123'
   },
   {
-    username: 'testAccount',
+    username: 'test',
     password: 'test'
   }
 ];
