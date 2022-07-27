@@ -31,7 +31,7 @@ router.get("/", withAuth, (req, res) => {
       // serialize data before passing to template
       const blogPosts = dbBlogData.map((blog) => blog.get({ plain: true }));
       // need to go back and add loggedIn tru to the render
-      res.render("dashboard", { blogPosts });
+      res.render("dashboard", { blogPosts, loggedIn: true });
     })
     .catch((err) => {
       console.log(err);
