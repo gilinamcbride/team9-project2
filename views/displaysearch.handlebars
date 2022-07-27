@@ -1,12 +1,14 @@
-<div id="photos"></div>
+<div class="display-search">
 
-<section class="post-list">
+<div class="photos" id="photos"></div>
+
+<section class="display-list">
     {{#each post as |post|}}
-    <div>
+    <div class="blog-post">
         {{> post-info post}}
     </div>
     {{/each}}
 </section>
-
+</div>
 
 <script src="/javascript/search-photos.js"></script>
