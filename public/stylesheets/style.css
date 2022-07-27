@@ -1,28 +1,40 @@
+:root { 
+  --first-color: #091D36;
+  --second-color: #0B4C84;
+  --third-color: #598EC2;
+  --fourth-color: #9BC1EE;
+  --fifth-color: #F0EFF5;
+  --primary-font: Calibri;
+  --secondary-font: Candara;
+  --tertiary-font: Dejavu Sans;
+}
+
 * {
     box-sizing: border-box;
   }
   
-  body, html {
+  body, html { 
     height: 100%;
     padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-    color: #333;
+    font-family: var(--primary-font);
+    color: var(--first-color);
+    background-color: var(--fourth-color);
   }
   
+
   a {
     text-decoration: none;
-    color: #225ca3;
+    color: var(--third-color);
     font-weight: bold;
     transition: color .1s;
   }
   
   a:hover {
-    color: #3486eb;
+    color:yellow;
   }
   
   button {
-    background-color: #225ca3;
+    background-color: var(--second-color);
     border: 0;
     padding: 1%;
     color: white;
@@ -33,7 +45,7 @@
   }
   
   button:hover {
-    background-color: #3486eb;
+    background-color: var(--fourth-color);
   }
   
   .post-list {
@@ -42,14 +54,15 @@
   }
   
   textarea, input {
-    padding: .5%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    padding: 1%;
+    border-radius: 10px 20px 30px 40px/30px;
+    display: inline-block;
+    border: 5px solid #32557f;
   }
   
   textarea:focus, input:focus {
     outline: none;
-    border: 1px solid #3486eb;
+    border: 1px solid color var(--first-color);
   }
   
   textarea {
@@ -57,21 +70,44 @@
     min-height: 100px;
   }
   
-  form > div {
-    margin-bottom: 2%;
-  }
-  
-  form label {
+  .login-form > div { 
+    font-family: var(--tertiary-font);
+    align-content:space-around;
     display: block;
+    flex: auto;
+    animation-duration: 3s;
+    animation-name: slidein;
+    }
+    @keyframes slidein {
+      from {
+        margin-left: 100%;
+        width: 300%;
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
+    }
+    
+  .signup-form > div { 
+    font-family: var(--tertiary-font);
+    align-content:space-around;
+    display: block;
+    flex: auto;
+    animation-duration: 3s;
+    animation-name: slidein;
   }
-  
+
+
   .wrapper {
-    width: 100%;
-    min-height: 100%;
-    max-width: 1200px;
+    width: 800px;
+    height: 1400px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+
   }
   
   header {
@@ -80,10 +116,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 1%;
+    animation-duration: 3s;
+    animation-name: slidein;
   }
   
   header h1 {
-    font-size: 1em;
+    font-size: 20px;
   }
   
   main {
@@ -96,8 +134,8 @@
     border: none;
     padding: 0;
     cursor: pointer;
-    text-decoration: none;
-    color: #225ca3;
+    text-transform: capitalize;
+    color: var(--second-color);
     font-size: 100%;
     font-weight: bold;
     transition: color .1s;
@@ -106,15 +144,15 @@
   
   .btn-no-style:hover {
     background: none;
-    color: #3486eb;
+    color: var(--first-color);
   }
   
   .delete-post-btn {
-    background-color: #d41414;
+    background-color: yellow;
   }
   
   .delete-post-btn:hover {
-    background-color: #ff643d;
+    background-color: #ff0000;
   }
   
   .post {
@@ -122,24 +160,16 @@
     line-height: 150%;
   }
   
-  .post .title span {
+  .post .title span { 
     font-style: italic;
     font-size: 90%;
-    color: #7d7d7d;
+    color: var(--first-color);
+    width: max-content;
   }
   
   .edit-link {
     display: block;
     margin: -1.5% 0 2% 0;
-  }
-  
-  .upvote-btn {
-    background-color: #197d0f;
-    transition: background-color .1s;
-  }
-  
-  .upvote-btn:hover {
-    background-color: #1f9c13;
   }
   
   .comment-form {
@@ -152,7 +182,7 @@
   }
   
   .comment:nth-child(odd) {
-    background-color: #fff5eb;
+    background-color: royalblue;
   }
   
   .comment .meta {
@@ -168,6 +198,7 @@
   .edit-post-form {
     margin-bottom: 5%;
   }
+
   
   footer {
     border-top: 1px solid #ccc;
