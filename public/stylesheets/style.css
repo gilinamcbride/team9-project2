@@ -1,178 +1,442 @@
+/* MAIN STYLES */
+
+:root {
+  --first-color: #091d36;
+  --second-color: #0b4c84;
+  --third-color: #598ec2;
+  --fourth-color: #9bc1ee;
+  --fifth-color: #f0eff5;
+  /* --primary-font: Calibri;
+  --secondary-font: Candara;
+  --tertiary-font: Dejavu Sans; */
+}
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../images/background.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  padding: 0 150px;
+  font-family: var(--primary-font);
+  color: var(--first-color);
+}
+
+main {
+  flex: 1;
+  padding: 2% 4%;
+}
+
+a {
+  text-decoration: none;
+  /* color: var(--first-color);
+  font-family: fantasy;
+  font-weight: bold;
+  transition: color 0.1s;
+  font-size: larger; */
+}
+
+/* a:hover {
+  color: yellow;
+} */
+
+/* button {
+  background-color: var(--second-color);
+  border: 0;
+  padding: 1%;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.1s;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: var(--fourth-color);
+}
+
+.post-list {
+  margin: 0;
+  padding: 0;
+}
+
+textarea,
+input {
+  padding: 1%;
+  border-radius: 10px 20px 30px 40px/30px;
+  display: inline-block;
+  border: 5px solid #32557f;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+  border: 1px solid color var(--first-color);
+}
+
+textarea {
+  min-width: 40%;
+  min-height: 100px;
+}
+
+.login-form > div {
+  font-family: var(--tertiary-font);
+  align-content: space-around;
+  display: block;
+  flex: auto;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
   }
-  
-  body, html {
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-    color: #333;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #225ca3;
-    font-weight: bold;
-    transition: color .1s;
-  }
-  
-  a:hover {
-    color: #3486eb;
-  }
-  
-  button {
-    background-color: #225ca3;
-    border: 0;
-    padding: 1%;
-    color: white;
-    font-weight: bold;
-    transition: background-color .1s;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  button:hover {
-    background-color: #3486eb;
-  }
-  
-  .post-list {
-    margin: 0;
-    padding: 0;
-  }
-  
-  textarea, input {
-    padding: .5%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  textarea:focus, input:focus {
-    outline: none;
-    border: 1px solid #3486eb;
-  }
-  
-  textarea {
-    min-width: 40%;
-    min-height: 100px;
-  }
-  
-  form > div {
-    margin-bottom: 2%;
-  }
-  
-  form label {
-    display: block;
-  }
-  
-  .wrapper {
+
+  to {
+    margin-left: 0%;
     width: 100%;
-    min-height: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
   }
-  
-  header {
-    border-bottom: 1px solid #ccc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1%;
+}
+
+.signup-form > div {
+  font-family: var(--tertiary-font);
+  align-content: space-around;
+  display: block;
+  flex: auto;
+  animation-duration: 3s;
+  animation-name: slidein;
+}*/
+
+/* .wrapper {
+  width: 900px;
+  height: 2000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.wrapper > * {
+  font-family: var(--tertiary-font);
+  font-size: xlarge;
+  font-weight: bold;
+}
+
+.wrapper .nav .form {
+  margin: 3px;
+} */
+
+/* HEADER STYLES */
+
+header {
+  border-bottom: 1px solid var(--fifth-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1%;
+  animation-duration: 3s;
+  animation-name: bounce-4;
+}
+
+.bounce-4 {
+  animation-name: bounce-4;
+  animation-timing-function: ease;
+}
+@keyframes bounce-4 {
+  0% {
+    transform: scale(1, 1) translateY(0);
   }
-  
-  header h1 {
-    font-size: 1em;
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
   }
-  
-  main {
-    flex: 1;
-    padding: 2% 4%;
+  30% {
+    transform: scale(0.9, 1.1) translateY(-100px);
   }
-  
-  .btn-no-style {
-    background: none;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-    text-decoration: none;
-    color: #225ca3;
-    font-size: 100%;
-    font-weight: bold;
-    transition: color .1s;
-    margin-left: 16px;
+  50% {
+    transform: scale(1, 1) translateY(0);
   }
-  
-  .btn-no-style:hover {
-    background: none;
-    color: #3486eb;
+  100% {
+    transform: scale(1, 1) translateY(0);
   }
-  
-  .delete-post-btn {
-    background-color: #d41414;
-  }
-  
-  .delete-post-btn:hover {
-    background-color: #ff643d;
-  }
-  
-  .post {
-    margin-bottom: 2%;
-    line-height: 150%;
-  }
-  
-  .post .title span {
-    font-style: italic;
-    font-size: 90%;
-    color: #7d7d7d;
-  }
-  
-  .edit-link {
-    display: block;
-    margin: -1.5% 0 2% 0;
-  }
-  
-  .upvote-btn {
-    background-color: #197d0f;
-    transition: background-color .1s;
-  }
-  
-  .upvote-btn:hover {
-    background-color: #1f9c13;
-  }
-  
-  .comment-form {
-    margin-bottom: 5%;
-  }
-  
-  .comment {
-    padding: 1%;
-    margin-bottom: 1%;
-  }
-  
-  .comment:nth-child(odd) {
-    background-color: #fff5eb;
-  }
-  
-  .comment .meta {
-    font-size: 90%;
-    margin-bottom: .5%;
-    opacity: .6;
-  }
-  
-  .new-post-form input {
-    width: 300px;
-  }
-  
-  .edit-post-form {
-    margin-bottom: 5%;
-  }
-  
-  footer {
-    border-top: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    padding: 1%;
-    font-size: 110%;
-  }
+}
+
+header h1 a {
+  font-family: "Satisfy", cursive;
+  font-size: 60px;
+  color: var(--fifth-color);
+}
+
+header nav a {
+  color: var(--fifth-color);
+  font-family: "Nunito", sans-serif;
+  font-weight: lighter;
+  font-size: 25px;
+  margin-right: 12px;
+}
+
+.btn-no-style {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--fifth-color);
+  font-family: "Nunito", sans-serif;
+  font-weight: lighter;
+  font-size: 25px;
+}
+
+.btn-no-style:hover {
+  background: none;
+  color: yellow;
+}
+
+header nav {
+  text-align: center;
+}
+
+header nav form input {
+  padding: 5px;
+  border-radius: 10px;
+  display: inline-block;
+  border: 5px solid var(--fourth-color);
+  background-color: var(--fifth-color);
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+}
+
+header nav form input:focus {
+  outline: none;
+  border: 1px solid color var(--first-color);
+}
+
+button {
+  background-color: var(--fourth-color);
+  border: 0;
+  padding: 5px;
+  color: var(--first-color);
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: var(--third-color);
+}
+
+/* HOMEPAGE STYLES */
+
+.blog-post {
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border: #9bc1ee solid 5px;
+  background-color: rgba(240, 239, 245, 0.25);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.blog-post:nth-child(odd) {
+  border: var(--second-color) solid 5px;
+}
+
+.title {
+  font-family: "Satisfy", cursive;
+  font-size: 35px;
+  color: var(--first-color);
+  font-weight: lighter;
+}
+
+.city-create-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  font-weight: lighter;
+  color: var(--first-color);
+}
+
+/* DASHBOARD STYLES */
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+}
+
+.dashboard h2 {
+  font-size: 35px;
+}
+
+.new-post-form {
+  border: var(--second-color) solid 5px;
+  padding: 30px;
+  background-color: rgba(240, 239, 245, 0.25);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  text-align: left;
+}
+
+.new-post-form div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.new-post-form div label {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+}
+
+.new-post-form div textarea {
+  height: 300px;
+}
+
+.new-post-form div input {
+  height: 30px;
+}
+
+.new-post-form button {
+  margin-top: 20px;
+  padding: 5px 10px;
+  width: 100px;
+}
+
+/* SINGLE POST STYLES */
+
+.single-post {
+  font-family: "Nunito", sans-serif;
+  padding: 30px;
+  background-color: rgba(240, 239, 245, 0.25);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.single-title {
+  font-family: "Satisfy", cursive;
+  font-size: 45px;
+  color: var(--first-color);
+  font-weight: lighter;
+}
+
+.content {
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.comment-form {
+  margin: 20px 0;
+}
+
+.comment-form textarea {
+  background-color: var(--fifth-color);
+  width: 300px;
+  height: 75px;
+}
+
+.comment-form button {
+  margin-top: 10px;
+  width: 200px;
+}
+
+.line {
+  border-top: var(--fifth-color) solid 1px;
+  margin-bottom: 40px;
+}
+
+.comment {
+  padding: 1%;
+  margin-bottom: 1%;
+  background-color: var(--first-color);
+  color: var(--fifth-color);
+}
+
+.comment:nth-child(odd) {
+  background-color: var(--second-color);
+}
+
+.text {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.comments-meta {
+  font-size: 90%;
+  /* margin-bottom: 0.5%; */
+  opacity: 0.6;
+}
+
+/*.delete-post-btn {
+  background-color: yellow;
+}
+
+.delete-post-btn:hover {
+  background-color: #ff0000;
+}
+
+.post {
+  margin-bottom: 2%;
+  line-height: 150%;
+}
+
+.post .title span {
+  font-style: italic;
+  font-size: 90%;
+  color: var(--first-color);
+  width: max-content;
+}
+
+.edit-link {
+  display: block;
+  margin: -1.5% 0 2% 0;
+}
+
+.comment-form {
+  margin-bottom: 5%;
+}
+
+.comment {
+  padding: 1%;
+  margin-bottom: 1%;
+}
+
+.comment:nth-child(odd) {
+  background-color: royalblue;
+}
+
+.comment .meta {
+  font-size: 90%;
+  margin-bottom: 0.5%;
+  opacity: 0.6;
+}
+
+.new-post-form input {
+  width: 300px;
+}
+
+.edit-post-form {
+  margin-bottom: 5%;
+}*/
+
+/* FOOTER STYLES */
+
+footer {
+  border-top: 1px solid var(--fifth-color);
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 95%;
+}
+
+footer p,
+footer p a {
+  color: var(--fifth-color);
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+}

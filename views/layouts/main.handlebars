@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Out Of Office</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400&family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
 
@@ -12,7 +19,7 @@
       <header>
         <h1>
           <a href="/">Out Of Office</a>
-          <p>A travel blog.</p>
+          {{! <p>A blog of wanderlust.</p> }}
         </h1>
         <nav>
           <form>
@@ -20,6 +27,7 @@
             <button id="city-search-btn">Search</button>
           </form>
           {{#if loggedIn}}
+            <a href="/">Home</a>
             <a href="/dashboard">Dashboard</a>
             <button id="logout" class="btn-no-style">Logout</button>
           {{else}}
@@ -32,7 +40,7 @@
         {{{body}}}
       </main>
       <footer>
-        <p>Out Of Office &copy; 2022</p>
+        <p>Out Of Office <br /> &copy; 2022</p>
         <p><a href="https://www.pexels.com/api/">Photos provided by Pexels</a></p>
       </footer>
     </div>
