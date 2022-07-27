@@ -172,7 +172,7 @@ button:hover {
 .dashboard {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   font-family: "Nunito", sans-serif;
   font-weight: bold;
 }
@@ -187,6 +187,7 @@ button:hover {
   background-color: rgba(240, 239, 245, 0.25);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   text-align: left;
+  width: 400px;
 }
 
 .new-post-form div {
@@ -213,6 +214,10 @@ button:hover {
   margin-top: 20px;
   padding: 5px 10px;
   width: 100px;
+}
+
+.your-posts {
+  width: 400px;
 }
 
 /* SINGLE POST STYLES */
@@ -453,16 +458,73 @@ footer p a {
 
 /* MEDIA QUERIES */
 
-/* @media screen and (max-width: 757px) {
-  .personal-info {
-    flex-direction: row;
+@media screen and (max-width: 1296px) {
+  .dashboard {
+    text-align: center;
   }
 
-  .personal-info p {
-    font-size: 16px;
-  }
-
-  .link-list {
+  .display-search {
     flex-direction: column;
   }
-} */
+
+  .display-list {
+    border-top: var(--fifth-color) solid 1px;
+    margin-top: 30px;
+    padding-top: 30px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  header {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 721px) {
+  .comment-form {
+    text-align: center;
+  }
+  .comment-form textarea {
+    width: 100%;
+  }
+
+  .edit-post-form label {
+    width: 100%;
+  }
+
+  .edit-post-form input {
+    width: 100%;
+  }
+
+  .delete-post-btn {
+    margin-top: 15px;
+    padding: 5px 15px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  header {
+    padding-bottom: 20px;
+  }
+
+  header h1 a {
+    font-size: 45px;
+  }
+  header nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main {
+    padding-top: 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer p {
+    text-align: center;
+  }
+}
