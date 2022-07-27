@@ -43,7 +43,7 @@ const displayPhotos = (dataObj) => {
     console.log(alt);
 
     var imageEl = document.createElement("div");
-    imageEl.innerHTML = `<img src="${image}" alt="${alt}">`;
+    imageEl.innerHTML = `<img src="${image}" alt="${alt}" width="200" height="300">`;
     mainEl.appendChild(imageEl);
   }
 };
