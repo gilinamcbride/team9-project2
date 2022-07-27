@@ -1,5 +1,5 @@
-<article>
-    <a href="/dashboard"> &larr; Back to dashboard</a>
+<article class="edit-post-section">
+    <a class="dashboard-btn" href="/dashboard"> &larr; Back to dashboard</a>
     <h2>
         Edit Post
     </h2>
@@ -19,15 +19,17 @@
             <input name="post-city-location" type="text" value="{{post.city_location}}" />
         </div>
 
-        <div>
-            By you on {{format_date post.created_at}}
+        <div class="edit-meta">
+            Written by you on {{format_date post.created_at}}
             |
-            <a href="/blogs/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+            {{post.comments.length}} {{format_plural "comment" post.comments.length}}
         </div>
-        <button type="submit">Save post</button>
+        <button type="submit" class="save-post-btn">Save post</button>
         <button type="button" class="delete-post-btn">Delete post</button>
     </form>
 </article>
+
+<div class="line"></div>
 
 <form class="comment-form">
   <div>

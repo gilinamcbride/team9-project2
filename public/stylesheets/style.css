@@ -6,9 +6,6 @@
   --third-color: #598ec2;
   --fourth-color: #9bc1ee;
   --fifth-color: #f0eff5;
-  /* --primary-font: Calibri;
-  --secondary-font: Candara;
-  --tertiary-font: Dejavu Sans; */
 }
 
 * {
@@ -34,102 +31,11 @@ main {
 
 a {
   text-decoration: none;
-  /* color: var(--first-color);
-  font-family: fantasy;
-  font-weight: bold;
-  transition: color 0.1s;
-  font-size: larger; */
 }
 
-/* a:hover {
-  color: yellow;
-} */
-
-/* button {
-  background-color: var(--second-color);
-  border: 0;
-  padding: 1%;
-  color: white;
-  font-weight: bold;
-  transition: background-color 0.1s;
-  cursor: pointer;
-  border-radius: 5px;
+a:hover {
+  color: #f1d35a;
 }
-
-button:hover {
-  background-color: var(--fourth-color);
-}
-
-.post-list {
-  margin: 0;
-  padding: 0;
-}
-
-textarea,
-input {
-  padding: 1%;
-  border-radius: 10px 20px 30px 40px/30px;
-  display: inline-block;
-  border: 5px solid #32557f;
-}
-
-textarea:focus,
-input:focus {
-  outline: none;
-  border: 1px solid color var(--first-color);
-}
-
-textarea {
-  min-width: 40%;
-  min-height: 100px;
-}
-
-.login-form > div {
-  font-family: var(--tertiary-font);
-  align-content: space-around;
-  display: block;
-  flex: auto;
-  animation-duration: 3s;
-  animation-name: slidein;
-}
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-}
-
-.signup-form > div {
-  font-family: var(--tertiary-font);
-  align-content: space-around;
-  display: block;
-  flex: auto;
-  animation-duration: 3s;
-  animation-name: slidein;
-}*/
-
-/* .wrapper {
-  width: 900px;
-  height: 2000px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
-.wrapper > * {
-  font-family: var(--tertiary-font);
-  font-size: xlarge;
-  font-weight: bold;
-}
-
-.wrapper .nav .form {
-  margin: 3px;
-} */
 
 /* HEADER STYLES */
 
@@ -192,7 +98,7 @@ header nav a {
 
 .btn-no-style:hover {
   background: none;
-  color: yellow;
+  color: #f1d35a;
 }
 
 header nav {
@@ -330,6 +236,8 @@ button:hover {
   font-size: 20px;
 }
 
+/* COMMENTS STYLES */
+
 .comment-form {
   margin: 20px 0;
 }
@@ -355,6 +263,7 @@ button:hover {
   margin-bottom: 1%;
   background-color: var(--first-color);
   color: var(--fifth-color);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .comment:nth-child(odd) {
@@ -368,61 +277,82 @@ button:hover {
 
 .comments-meta {
   font-size: 90%;
-  /* margin-bottom: 0.5%; */
   opacity: 0.6;
 }
 
-/*.delete-post-btn {
-  background-color: yellow;
+/* SEARCH STYLES */
+
+.display-search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.delete-post-btn:hover {
-  background-color: #ff0000;
+.photos {
+  flex: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
-.post {
-  margin-bottom: 2%;
-  line-height: 150%;
+.photos div {
+  margin: 10px 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.post .title span {
-  font-style: italic;
-  font-size: 90%;
+/* EDIT POST STYLES */
+
+.edit-post-section h2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 35px;
+}
+
+.dashboard-btn {
+  font-family: "Satisfy", cursive;
   color: var(--first-color);
-  width: max-content;
-}
-
-.edit-link {
-  display: block;
-  margin: -1.5% 0 2% 0;
-}
-
-.comment-form {
-  margin-bottom: 5%;
-}
-
-.comment {
-  padding: 1%;
-  margin-bottom: 1%;
-}
-
-.comment:nth-child(odd) {
-  background-color: royalblue;
-}
-
-.comment .meta {
-  font-size: 90%;
-  margin-bottom: 0.5%;
-  opacity: 0.6;
-}
-
-.new-post-form input {
-  width: 300px;
+  font-size: 30px;
 }
 
 .edit-post-form {
   margin-bottom: 5%;
-}*/
+  font-family: "Nunito", sans-serif;
+  padding: 30px;
+  background-color: rgba(240, 239, 245, 0.25);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-family: "Nunito", sans-serif;
+}
+
+.edit-post-form div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.edit-post-form label {
+  font-size: 25px;
+}
+
+.edit-post-form input {
+  font-size: 20px;
+}
+
+.edit-meta {
+  margin-bottom: 15px;
+}
+
+.save-post-btn {
+  padding: 5px 20px;
+  margin-right: 10px;
+  background-color: var(--second-color);
+  color: var(--fifth-color);
+}
+
+.delete-post-btn {
+  padding: 5px 20px;
+  background-color: var(--second-color);
+  color: var(--fifth-color);
+}
 
 /* FOOTER STYLES */
 
@@ -440,3 +370,34 @@ footer p a {
   font-family: "Nunito", sans-serif;
   font-size: 20px;
 }
+
+/* SIGNUP/LOGIN STYLES */
+
+/* .login-form > div {
+  font-family: var(--tertiary-font);
+  align-content: space-around;
+  display: block;
+  flex: auto;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.signup-form > div {
+  font-family: var(--tertiary-font);
+  align-content: space-around;
+  display: block;
+  flex: auto;
+  animation-duration: 3s;
+  animation-name: slidein;
+} */
